@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6715b366bc275424a945ad92345c5202",
+    "content-hash": "0b28a5f6bb852cb84bdf3bcef9e8be45",
     "packages": [
         {
             "name": "3x1io/filament-sitemap",

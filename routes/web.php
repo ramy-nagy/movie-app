@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return redirect()->route('movies');
     return view('welcome');
 });
+
+Route::resource('/movies', MovieController::class)->names('movie');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -34,9 +38,6 @@ Route::group(
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ],
     function () {
-        Route::get('/', function () {
-            return view('welcome');
-        });
     }
 );
 

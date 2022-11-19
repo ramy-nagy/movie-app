@@ -24,5 +24,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'test.user@ramydemos.com',
         ]);
         $this->command->info(" ---------- Create test-user test.user ---------- ");
+
+        $this->call([
+            MovieSeeder::class
+        ]);
+        $this->command->info(" ---------- Movies sedded success  ---------- ");
+
     }
 }
